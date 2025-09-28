@@ -45,56 +45,34 @@ export const PageTransitionProvider = ({ children }) => {
 
   return (
     <StepContext.Provider value={{ step, setStep }}>
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={router.pathname}
-          initial={{
-            opacity: 0,
-            pointerEvents: "none",
-          }}
-          animate={{
-            opacity: 0, // Always hidden (no loading screen)
-            pointerEvents: "none", // Always disabled
-          }}
-          className={
-            "fixed w-full h-full left-0 top-0 z-[99] overflow-hidden transition-all duration-300 bg-Mneutral_900 opacity-0 pointer-events-none"
-          }
+      {/* Completely disable AnimatePresence by removing mode and animations */}
+      <div>
+        {/* Hide the loading screen completely */}
+        <div
+          className="fixed w-full h-full left-0 top-0 z-[99] overflow-hidden transition-all duration-300 bg-Mneutral_900 opacity-0 pointer-events-none"
+          style={{ display: 'none' }} // Completely hide the loading screen
         >
-          <motion.img
-            initial={{
-              x: "-50%",
-              y: "-50%",
-              scale: 1,
-              rotate: "0deg",
-            }}
-            animate={{
-              x: "-50%",
-              y: "-50%",
-              scale: 1,
-              rotate: "0deg",
-            }}
-            transition={{
-              duration: 0.9,
-              ease: "easeInOut",
-            }}
+          <img
             src={originalUrl + "sdasd.svg"}
             className="absolute left-1/2 top-1/2 z-[3]"
             alt=""
+            style={{ 
+              transform: 'translate(-50%, -50%)',
+              display: 'none' // Hide the loading image too
+            }}
           />
-        </motion.div>
+        </div>
 
-        <motion.div
-          key={router.pathname} // Each page transition is identified by pathname
-          initial={{ opacity: 1 }} // Start visible
-          animate={{
-            opacity: 1, // Always visible (instant content load)
+        {/* Remove all motion animations from content */}
+        <div
+          style={{ 
+            opacity: 1,
+            display: 'block' // Always show content immediately
           }}
-          exit={{ opacity: 0 }} // Fade out when leaving the page
-          transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           {children}
-        </motion.div>
-      </AnimatePresence>
+        </div>
+      </div>
     </StepContext.Provider>
   );
 };

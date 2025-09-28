@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import BackdropFixed from "../Path/BackdropFixed";
 
 const Navbar = ({ step = 0 }) => {
@@ -75,9 +76,18 @@ const Navbar = ({ step = 0 }) => {
               (step > 3 ? "" : "-translate-y-[2rem]")
             }
           >
-            <Link href={"/"} className="text-Mgrayscale_900">
-               POrtfolio
-            </Link>
+            <Link href="/" className="flex items-center space-x-2">
+      {/* Logo image */}
+      <Image
+        src="/images/hashirlogoblack.png"   // stored in public/logo.png
+        alt="Logo"
+        width={16}
+        height={16}
+        className="object-contain"
+      />
+      {/* Text (optional) */}
+      <span className="text-Mgrayscale_900 font-medium ">HASHIR</span>
+    </Link>
 
             <div className="hidden md:flex items-center justify-center gap-4 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
               <Link href={"/projects"}>PROJECTS</Link>
