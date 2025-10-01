@@ -44,11 +44,37 @@ const Index = () => {
         step={4} // Pass final step value to prevent layout issues
         initial={false} // Disable mount animations
       >
-        <section className="pt-[40px] md:pt-[80px] pb-0">
+        <section className="pt-[40px] md:pt-[50px] pb-0">
           <Container>
-            <KobeName step={4} initial={false} animate={{ opacity: 1 }} /> {/* Pass final step value and disable animations */}
+            {/* <KobeName step={4} initial={false} animate={{ opacity: 1 }} />  */}
+            <div className="flex justify-between items-start">
+            <div>
+            <h1 className="text-6xl font-medium text-[#151515]">AUTOMATED RISK ANALYSIS<br/>
+          FOR CONSTRUCTION</h1>
+          <div className="mt-[20px] flex gap-32">
+              <div>
+                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Capturing Moments,</p>
+                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Telling Stories.</p>
+              </div>
+              <div>
+                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Capturing Moments,</p>
+                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Telling Stories.</p>
+              </div>
+              <div>
+                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Capturing Moments,</p>
+                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Telling Stories.</p>
+              </div>
+            </div>
+            </div>
+            <div className="w-[300px] pt-2">
+            <p className="text-[#5E5E5E] text-[0.85rem] leading-relaxed">
+              Photography is more than just taking pictures—it's about preserving emotions, details, and memories that last a lifetime.
+            </p>
+          </div>
+          </div>
 
-            <div className="grid md:grid-cols-2 gap-4 mt-[40px] md:mt-[80px]">
+
+            {/* <div className="grid md:grid-cols-2 gap-4 mt-[40px] md:mt-[80px]">
               <div className="h-full flex flex-wrap">
                 <p className="text__32 overflow-hidden">
                   <span className=" ml-8 transition-all duration-700 inline-block translate-x-0">
@@ -69,13 +95,13 @@ const Index = () => {
               </div>
               <div className="md:mt-0 mt-[100px]">
                 <div className="overflow-hidden w-[200px] ss:w-[250px] md:w-[350px] h-[190px] ss:h-[220px] md:h-[295px]">
-                  <div className="transition-all duration-700" style={{ opacity: 1 }}> {/* Force full opacity */}
+                  <div className="transition-all duration-700" style={{ opacity: 1 }}> 
                     <WrapImageLogo />
                   </div>
                 </div>
-
+           
                 <div className="text__32 mt-[20px] md:mt-[40px]">
-                  <TextAnimation isVisible={true}> {/* Set to always visible */}
+                  <TextAnimation isVisible={true}>  
                     <span className="ml-8">Photography is more than just</span>{" "}
                     <span className="xl:block hidden"><br /></span> taking pictures—it's
                     about preserving <span className="xl:block hidden"><br /></span>{" "}
@@ -84,15 +110,15 @@ const Index = () => {
                   </TextAnimation>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="text-center md:hidden">
+            {/* <div className="text-center md:hidden">
               <p className="text__18 w-full mt-[48px]">SCROLL TO EXPLORE</p>
-            </div>
+            </div> */}
           </Container>
         </section>
 
-        <section className="py-[48px]">
+        {/* <section className="py-[48px]">
           <Container>
             <div className="flex items-center justify-between w-[706px] mx-auto relative left-1/2 -translate-x-1/2 md:w-full">
               {[
@@ -113,7 +139,7 @@ const Index = () => {
               })}
             </div>
           </Container>
-        </section>
+        </section> */}
 
         {/* <section className="pt-0">
           <Container>
@@ -123,7 +149,7 @@ const Index = () => {
 
         <section>
           <Container>
-            <h5 className="text__24 opacity-40 mb-[36px]">OUR WORK</h5>
+            {/* <h5 className="text__24 opacity-40 mb-[36px]">OUR WORK</h5> */}
 
             <WrapWork />
           </Container>

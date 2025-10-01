@@ -72,7 +72,7 @@ const Navbar = ({ step = 0 }) => {
         <Container className="overflow-hidden">
           <div
             className={
-              "flex items-center justify-between relative text__16 uppercase transition-all duration-700 " +
+              "flex items-center justify-between relative text__16 text-[0.85rem] font-medium transition-all duration-700 " +
               (step > 3 ? "" : "-translate-y-[2rem]")
             }
           >
@@ -86,24 +86,24 @@ const Navbar = ({ step = 0 }) => {
         className="object-contain"
       />
       {/* Text (optional) */}
-      <span className="text-Mgrayscale_900 font-medium ">HASHIR</span>
+      <span className="text-Mgrayscale_900 text-[0.85 rem] ">Hashir</span>
     </Link>
 
-            <div className="hidden md:flex items-center justify-center gap-4 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-              <Link href={"/projects"}>PROJECTS</Link>
-              <Link href={"/article"}>ARTICLE</Link>
-              <Link href={"/about"}>ABOUT</Link>
+            <div className="hidden md:flex  justify-end  gap-[36px] absolute right-0  top-1/2 -translate-y-1/2">
+              <Link href={"/projects"}>Projects</Link>
+              <Link href={"/article"}>Design</Link>
+              <Link href={"/about"}>About</Link>
               <div
                 onClick={() => setToogleResume(!ToogleResume)}
                 className="cursor-pointer"
               >
-                RESUME{" "}
+                Resume  `{" "}
               </div>
             </div>
 
-            <Link href={"/contact"} className="md:block hidden">
+            {/* <Link href={"/contact"} className="md:block hidden">
               CONTACT
-            </Link>
+            </Link> */}
             <div
               onClick={() => setToogleMenu(!ToogleMenu)}
               className="font-medium text__14 md:hidden cursor-pointer"
@@ -128,10 +128,10 @@ const Navbar = ({ step = 0 }) => {
         <Container className="py-4">
           <div className="grid grid-cols-1 gap-y-[20px]">
             <Link href={"/projects"} className="text-[32px]">
-              PROJECTS
+              Projects
             </Link>
             <Link href={"/article"} className="text-[32px]">
-              ARTICLE
+              Design
             </Link>
             <Link href={"/about"} className="text-[32px]">
               ABOUT
