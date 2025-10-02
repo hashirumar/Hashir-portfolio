@@ -79,14 +79,14 @@ const Navbar = ({ step = 0 }) => {
             <Link href="/" className="flex items-center space-x-2">
       {/* Logo image */}
       <Image
-        src="/images/hashirlogoblack.png"   // stored in public/logo.png
+        src="/images/hashirdarkbglogo.png"   // stored in public/logo.png
         alt="Logo"
-        width={16}
-        height={16}
+        width={28}
+        height={28}
         className="object-contain"
       />
       {/* Text (optional) */}
-      <span className="text-Mgrayscale_900 text-[0.85 rem] ">Hashir</span>
+      <span className="text-Mgrayscale_900 text-[1rem] text-medium ">Hashir</span>
     </Link>
 
             <div className="hidden md:flex  justify-end  gap-[36px] absolute right-0  top-1/2 -translate-y-1/2">
