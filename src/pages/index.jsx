@@ -37,14 +37,14 @@ const Index = () => {
   return (
     <Fragment>
       <Layout
-        title="✱ JACOB"
-        description="✱ JACOB Desc"
+        title="✱ HASHIR"
+        description="✱ PORTFOLIO"
         navbar={true}
         useHeight={false}
         step={4} // Pass final step value to prevent layout issues
         initial={false} // Disable mount animations
       >
-        <section className="pt-[40px] md:pt-[50px] pb-0">
+        <section className="pt-[40px] md:pt-[70px] pb-0">
           <Container>
             {/* <KobeName step={4} initial={false} animate={{ opacity: 1 }} />  */}
             <div className="flex justify-between items-start">

@@ -8,7 +8,7 @@ const WrapWork = () => {
   const [onHoverText, setonHoverText] = useState(0);
 
   return (
-    <Fragment>
+    <Fragment>  
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {[
           {
@@ -40,7 +40,7 @@ const WrapWork = () => {
                 onMouseEnter={() => setonHoverText(idx + 1)} // Set state menjadi true saat hover
                 onMouseLeave={() => setonHoverText(0)}
               >
-                <div className="w-full h-[340px] md:h-[400px] lg:h-[550px] xl:h-[638px] relative overflow-hidden mb-3">
+                <div className="w-full rounded-lg h-[340px] md:h-[400px] lg:h-[550px] xl:h-[638px] relative overflow-hidden mb-3">
                   <motion.img
                     initial={{ scale: 1 }}
                     animate={{
@@ -55,8 +55,9 @@ const WrapWork = () => {
                   />
                 </div>
                 <div className="relative overflow-hidden inline-block w-full">
-                  <h5 className="text__24">
-                    <span className="opacity-20">0{idx + 1}</span> {obj.name}
+                  <h5 className="text__18">
+                    {/* <span className="opacity-20">0{idx + 1}</span> */}
+                     {obj.name}
                   </h5>
                   <motion.div
                     initial={{ y: "100%" }}
@@ -68,7 +69,7 @@ const WrapWork = () => {
                     }}
                     className="absolute right-0 top-1/2"
                   >
-                    <img src={originalUrl + "ArrowUpRight.svg"} alt="" />
+                    <img src={   + "ArrowUpRight.svg"} alt="" />
                   </motion.div>
                 </div>
               </Link>
