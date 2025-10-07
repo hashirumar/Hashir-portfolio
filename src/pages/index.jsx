@@ -51,18 +51,18 @@ const Index = () => {
             <div>
             <h1 className="text-6xl font-medium text-[#151515]">AUTOMATED RISK ANALYSIS<br/>
           FOR CONSTRUCTION</h1>
-          <div className="mt-[20px] flex gap-32">
+          <div className="mt-[20px] flex gap-56">
               <div>
-                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Capturing Moments,</p>
-                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Telling Stories.</p>
+                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Full </p>
+                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Stack Dev.</p>
               </div>
               <div>
-                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Capturing Moments,</p>
-                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Telling Stories.</p>
+                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">UI</p>
+                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Designer.</p>
               </div>
               <div>
-                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Capturing Moments,</p>
-                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Telling Stories.</p>
+                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Visual</p>
+                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Designer.</p>
               </div>
             </div>
             </div>

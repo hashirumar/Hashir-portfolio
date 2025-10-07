@@ -15,18 +15,18 @@ const Index = () => {
   const projectData = {
     title: "TWITCH",
     year: "2025",
-    client: "FamilyFund",
+    client: "Personal Project",
     projectYear: "2025",
-    service: "Web development, CMS",
+    service: "Full-Stack Web Development",
     mainImage: "Container.png",
     details: [
       {
-        type: "LOCATION",
-        desc: "MILAN, ITALY",
+        type: "LIVE DEMO",
+        desc: "click here",
       },
       {
-        type: "TYPE",
-        desc: "LIFESTYLE & PORTRAIT PHOTOGRAPHY",
+        type: "ROLE",
+        desc: "Full-Stack Developer, UI/UX Designer",
       },
       {
         type: "ROLE",
@@ -38,48 +38,58 @@ const Index = () => {
       },
     ],
     techStack: [
-      "Frontend (Next.js)",
-      "Custom CMS",
-      "SEO",
-      "Infrastructure",
+      "Next.js 14",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "LiveKit",
+    "Clerk",
+    "MySQL (PlanetScale)",
+    "Websockets (real-time chat)",
+    "Socket.io (if used)",
+    "Server Side Rendering",
+    "Shadcn UI", 
+    "Vercel Infrastructure", 
+    "Authentication & Webhooks",
     ],
     sections: [
-      {
-        title: "OVERVIEW",
-        content: "Milan Portrait is a lifestyle photography series captured in the heart of Milan — a city where timeless architecture meets modern elegance. The series focuses on portraying the natural charm and individuality of the subject, set against the soft textures of historic streets, urban cafés, and golden afternoon light.",
-        hasIndent: true,
-        indentWord: "Milan",
-      },
-      {
-        title: "CREATIVE DIRECTION",
-        content: "The goal was to create a visual narrative that feels effortless yet intentional — blending candid expressions with editorial-style framing. Each shot was guided by the idea of movement, emotion, and presence. Rather than overly posed compositions, I encouraged natural gestures and quiet moments in between.",
-        hasIndent: false,
-      },
-    ],
-    stats: [
-      {
-        value: "25%",
-        label: "Less traffic",
-      },
-      {
-        value: "10x",
-        label: "Page load times",
-      },
-      {
-        value: "15%",
-        label: "Higher infra costs",
-      },
-      {
-        value: "$1.2M",
-        label: "Legal fees",
-      },
-    ],
-    relatedWork: [
-      "sda.png",
-      "rr1.png",
-      "rr2.png",
-    ],
-  };
+    {
+      title: "OVERVIEW",
+      content: "This Twitch Clone is a full-featured livestreaming platform built with Next.js 14. It allows anyone to stream using RTMP/WHIP protocols, supports OBS software, and provides real-time chat, live viewer counts, user management, and a fully responsive modern UI. The app mimics Twitch's most important workflows—streamer dashboard, follower system, blocking/kicking users, and chat moderation. Authentication is powered by Clerk, streaming via LiveKit, and storage with MySQL.",
+      hasIndent: true,
+      indentWord: "Twitch Clone",
+    },
+    {
+      title: "FEATURES & EXPERIENCE",
+      content: "Key features include live statuses, instant chat (with slow mode, follower-only mode, enable/disable options, and colored usernames), thumbnail uploads for streams, and dashboards for both viewers and creators. Built with SSR, route groups, custom layouts, and real-time APIs using Next.js. Developed as an in-depth learning and demonstration project for advanced React and full-stack development patterns.",
+      hasIndent: false,
+    },
+    
+  ],
+  stats: [
+    {
+      value: "99%",
+      label: "Live chat delivery rate",
+    },
+    {
+      value: "10x",
+      label: "Real-time scaling capacity",
+    },
+    {
+      value: "0ms",
+      label: "SSR hydration error",
+    },
+    {
+      value: "100+",
+      label: "Concurrent viewers supported",
+    },
+  ],
+  relatedWork: [
+    "sda.png",
+    "rr1.png",
+    "rr2.png",
+  ],
+};
 
   return (
     <Fragment>
@@ -91,7 +101,7 @@ const Index = () => {
       >
         <section>
           <Container>
-            <h2 className="text__72 my-2 flex justify-center font-medium tracking-tight">
+            <h2 className="text__72 mt-12 mb-[32px] flex justify-center font-medium tracking-tight">
               {projectData.title}
             </h2>
             <p className="text__20 opacity-60 flex justify-center">
@@ -138,7 +148,7 @@ const Index = () => {
 
             <div className="grid grid-cols-1 gap-[2rem]">
               {/* Project Details - First Instance */}
-              <div className="grid gap-y-4 grid-cols-1 md:grid-cols-5">
+              {/* <div className="grid gap-y-4 grid-cols-1 md:grid-cols-5">
                 <div className="md:col-span-2"></div>
                 <div className="md:col-span-3">
                   <div className="grid grid-cols-1">
@@ -157,12 +167,12 @@ const Index = () => {
                     ))}
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Tech Stack */}
-              <div className="grid gap-y-4 grid-cols-1 md:grid-cols-5">
+              <div className="grid mt-12 grid-cols-1 md:grid-cols-5">
                 <div className="md:col-span-2">
-                  <p className="text__24 opacity-40">TECH STACK</p>
+                  <p className="text__16 opacity-60">TECH STACK</p>
                 </div>
                 <div className="md:col-span-3">
                   <div className="my-6 flex flex-wrap gap-2">
@@ -180,12 +190,12 @@ const Index = () => {
 
               {/* Content Sections (Overview, Creative Direction, etc.) */}
               {projectData.sections.map((section, index) => (
-                <div key={index} className="grid gap-y-4 grid-cols-1 md:grid-cols-5">
+                <div key={index} className="grid mb-[32px] grid-cols-1 md:grid-cols-5">
                   <div className="md:col-span-2">
-                    <p className="text__24 opacity-40">{section.title}</p>
+                    <p className="text__16 uppercase tracking-[2px] opacity-60">{section.title}</p>
                   </div>
                   <div className="md:col-span-3">
-                    <h5 className="text__32">
+                    <h5 className="text__16 leading-[1.65] tracking-tight" >
                       {section.hasIndent ? (
                         <>
                           <span className="ml-[5rem]">{section.indentWord}</span>
