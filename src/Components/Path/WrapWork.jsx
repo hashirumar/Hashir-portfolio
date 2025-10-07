@@ -12,12 +12,12 @@ const WrapWork = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {[
           {
-            img: originalUrl + "w4.png",
+            img: originalUrl + "twitchlogo.png",
             name: "Milan Portraits.",
             link: "/work/detail/milan-portraits",
           },
           {
-            img: originalUrl + "w1.png",
+            img: originalUrl + "naturebrightlogo.png",
             name: "Weeding Dream.",
             link: "/work/detail/weeding-dream",
           },

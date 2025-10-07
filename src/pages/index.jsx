@@ -175,7 +175,7 @@ const Index = () => {
 
         {/* <WrapHowItWork /> */}
         
-        <WrapReviews />
+        {/* <WrapReviews /> */}
 
         <BannerContact />
       </Layout>
