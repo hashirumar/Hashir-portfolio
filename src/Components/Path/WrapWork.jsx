@@ -40,7 +40,7 @@ const WrapWork = () => {
                 onMouseEnter={() => setonHoverText(idx + 1)} // Set state menjadi true saat hover
                 onMouseLeave={() => setonHoverText(0)}
               >
-                <div className="w-full rounded-lg h-[340px] md:h-[400px] lg:h-[550px] xl:h-[638px] relative overflow-hidden mb-3">
+                <div className="w-full border border-b-[#DDDDDD] rounded-xl h-[340px] md:h-[400px] lg:h-[550px] xl:h-[638px] relative overflow-hidden mb-3">
                   <motion.img
                     initial={{ scale: 1 }}
                     animate={{

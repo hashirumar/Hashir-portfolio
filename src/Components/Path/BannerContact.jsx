@@ -11,15 +11,15 @@ const BannerContact = () => {
     <Fragment>
       <section>
         <Container>
-          <h4 className="text-[24px] ss:text-[36px] md:text-[46px] lg:text-[64px] xl:text-[80px] xl:ml-[144px]">
-            Have a project <br /> in mind?
+          <h4 className="text-[16px] ss:text-[24px] md:text-[36px] lg:text-[46px] xl:text-[64px] flex justify-center items-center">
+            Ready to Transform  <br />      Your Vision?
           </h4>
           <div
             className="flex justify-end py-6"
             onMouseEnter={() => setonHoverBtn(true)} // Set state menjadi true saat hover
             onMouseLeave={() => setonHoverBtn(false)}
           >
-            <Link href={"/contact"} className="flex items-center gap-3">
+            {/* <Link href={"/contact"} className="flex items-center gap-3">
               <div className="relative overflow-hidden inline-block">
                 <img
                   src={originalUrl + "Project image.png"}
@@ -95,9 +95,9 @@ const BannerContact = () => {
                   className="w-[56px] ss:w-[86px] xs:w-[110px] lg:w-[140px] xl:w-auto absolute"
                 />
               </div>
-            </Link>
+            </Link> */}
           </div>
-          <p className="text__24 opacity-60">
+          <p className="text__24 opacity-60 ">
             <span className="ml-8">
               I’d love to hear from you! Whether it’s a
             </span>

@@ -74,79 +74,13 @@ const Index = () => {
           </div>
 
 
-            {/* <div className="grid md:grid-cols-2 gap-4 mt-[40px] md:mt-[80px]">
-              <div className="h-full flex flex-wrap">
-                <p className="text__32 overflow-hidden">
-                  <span className=" ml-8 transition-all duration-700 inline-block translate-x-0">
-                    Capturing Moments,
-                  </span>{" "}
-                  <br />{" "}
-                  <span className="transition-all duration-700 inline-block translate-x-0">
-                    Telling Stories.
-                  </span>
-                </p>
-                <div className="w-full self-end inline-block">
-                  <p className="text__18 md:inline-block hidden overflow-hidden transition-all duration-700 max-w-[100vw]">
-                    <span className="w-max inline-block">
-                      SCROLL TO EXPLORE
-                    </span>
-                  </p>
-                </div>
-              </div>
-              <div className="md:mt-0 mt-[100px]">
-                <div className="overflow-hidden w-[200px] ss:w-[250px] md:w-[350px] h-[190px] ss:h-[220px] md:h-[295px]">
-                  <div className="transition-all duration-700" style={{ opacity: 1 }}> 
-                    <WrapImageLogo />
-                  </div>
-                </div>
-           
-                <div className="text__32 mt-[20px] md:mt-[40px]">
-                  <TextAnimation isVisible={true}>  
-                    <span className="ml-8">Photography is more than just</span>{" "}
-                    <span className="xl:block hidden"><br /></span> taking pictures—it's
-                    about preserving <span className="xl:block hidden"><br /></span>{" "}
-                    emotions, details, and memories that{" "}
-                    <span className="xl:block hidden"><br /></span> last a lifetime.
-                  </TextAnimation>
-                </div>
-              </div>
-            </div> */}
-
-            {/* <div className="text-center md:hidden">
-              <p className="text__18 w-full mt-[48px]">SCROLL TO EXPLORE</p>
-            </div> */}
+          
           </Container>
         </section>
 
-        {/* <section className="py-[48px]">
-          <Container>
-            <div className="flex items-center justify-between w-[706px] mx-auto relative left-1/2 -translate-x-1/2 md:w-full">
-              {[
-                originalUrl + "lg1.svg",
-                originalUrl + "lg2.svg",
-                originalUrl + "lg3.svg",
-                originalUrl + "lg4.svg",
-                originalUrl + "lg5.svg",
-              ].map((obj, index) => {
-                return (
-                  <img
-                    key={index}
-                    src={obj}
-                    className="transition-all duration-300 opacity-30 hover:opacity-100  xl:w-auto w-[120px]"
-                    alt=""
-                  />
-                );
-              })}
-            </div>
-          </Container>
-        </section> */}
+        
 
-        {/* <section className="pt-0">
-          <Container>
-            <WrapTextLine />
-          </Container>
-        </section> */}
-
+        
         <section>
           <Container>
             {/* <h5 className="text__24 opacity-40 mb-[36px]">OUR WORK</h5> */}
