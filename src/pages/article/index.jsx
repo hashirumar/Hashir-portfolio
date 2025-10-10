@@ -9,11 +9,11 @@ import WrapAnimateUp from "@/Components/Path/WrapAnimateUp";
 
 const Index = () => {
   const originalUrl = useHostname() + "/images/";
-  const { step } = useStep();
+  
   return (
     <Fragment>
       <Layout
-        step={step}
+       
         title="Article"
         description="Article Desc"
         navbar={true}

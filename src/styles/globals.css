@@ -6,6 +6,171 @@ html,
 body {
   scroll-behavior: smooth;
   @apply text-Mneutral_900 font-InterTight;
+  /* Add smooth transition for dark mode */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@font-face {
+  font-family: "am";
+  src: url(/fonts/akkuratmono.ttf);
+}
+
+@font-face {
+  font-family: "db";
+  src: url(/fonts/druk-bold.otf);
+}
+
+@font-face {
+  font-family: "dh";
+  src: url(/fonts/druk-heavy.otf);
+}
+
+@font-face {
+  font-family: "dm";
+  src: url(/fonts/druk-medium.otf);
+}
+
+@font-face {
+  font-family: "ds";
+  src: url(/fonts/druk-super.otf);
+}
+/* Dark mode styles for html and body */
+html.dark,
+html body {
+  @apply bg-[#0F0F0F] text-[#E5E5E5];
+}
+
+.container {
+  max-width: 1300px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 92%;
+  }
+}
+img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+}
+
+section {
+  @apply py-[40px] md:py-[80px];
+  /* Add transition for sections */
+  transition: background-color 0.3s ease;
+}
+
+/* Dark mode for sections */
+.dark section {
+  @apply bg-[#0F0F0F];
+}
+
+.clamp-1 {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.clamp-2 {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.clamp-3 {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.wrapArticleCard:hover .linkWrap {
+  @apply !bottom-3;
+}
+
+/* ===== DARK MODE STYLES - ADD THESE AT THE BOTTOM ===== */
+
+/* Smooth transitions for all color changes */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Dark mode for common card/container backgrounds */
+.dark .bg-white {
+  @apply bg-[#1A1A1A];
+}
+
+.dark .bg-gray-50,
+.dark .bg-gray-100 {
+  @apply bg-[#1A1A1A];
+}
+
+.dark .bg-gray-200 {
+  @apply bg-[#252525];
+}
+
+/* Dark mode for text colors */
+.dark .text-gray-900 {
+  @apply text-[#E5E5E5];
+}
+
+.dark .text-gray-800 {
+  @apply text-[#D0D0D0];
+}
+
+.dark .text-gray-700,
+.dark .text-gray-600 {
+  @apply text-[#A0A0A0];
+}
+
+.dark .text-gray-500 {
+  @apply text-[#8A8A8A];
+}
+
+/* Dark mode for borders */
+.dark .border-gray-200,
+.dark .border-gray-300 {
+  @apply border-[#2A2A2A];
+}
+
+/* Dark mode for hover states */
+.dark .hover\:bg-gray-100:hover {
+  @apply bg-[#252525];
+}
+
+.dark .hover\:text-gray-900:hover {
+  @apply text-white;
+}
+
+/* Dark mode for your custom text color */
+.dark .text-Mneutral_900 {
+  @apply text-[#E5E5E5];
+}
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  scroll-behavior: smooth;
+  @apply text-Mneutral_900 font-InterTight;
 }
 
 .container {
@@ -54,4 +219,4 @@ section {
 
 .wrapArticleCard:hover .linkWrap {
   @apply !bottom-3;
-}
+} */

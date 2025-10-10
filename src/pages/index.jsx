@@ -12,27 +12,12 @@ import WrapWork from "@/Components/Path/WrapWork";
 import TextAnimation from "@/Components/Path/TextAnimation";
 import KobeName from "@/Components/Path/KobeName";
 import WrapHowItWork from "@/Components/Path/WrapHowItWork";
+import { DarkModeToggle } from "@/Components/DarkMode/DarkModeContext";
 
 const Index = () => {
   const originalUrl = useHostname() + "/images/";
 
-  // Removed step state and useEffect for animation
-  // const [step, setStep] = useState(0);
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setStep((prevStep) => {
-  //       if (prevStep === 4) {
-  //         clearInterval(interval); // Hentikan interval setelah mencapai 6
-  //         return prevStep;
-  //       }
-  //       return prevStep + 1; // Pindah ke langkah berikutnya
-  //     });
-  //   }, 1000); // Interval 1 detik
-
-  //   // Membersihkan interval saat komponen unmount
-  //   return () => clearInterval(interval);
-  // }, []);
+  
 
   return (
     <Fragment>
@@ -44,30 +29,30 @@ const Index = () => {
         step={4} // Pass final step value to prevent layout issues
         initial={false} // Disable mount animations
       >
+       {/* <DarkModeToggle /> */}
         <section className="pt-[40px] md:pt-[70px] pb-0">
           <Container>
             {/* <KobeName step={4} initial={false} animate={{ opacity: 1 }} />  */}
             <div className="flex justify-between items-start">
             <div>
-            <h1 className="text-6xl font-medium text-[#151515]">AUTOMATED RISK ANALYSIS<br/>
-          FOR CONSTRUCTION</h1>
+            <h1 className="text-[200px] opacity-60 font-db font-medium text-white ">HASHIR UMAR</h1>
           <div className="mt-[20px] flex gap-56">
               <div>
-                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Full </p>
-                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Stack Dev.</p>
+                <p className="text-[#eaeaea] text-[0.85rem] font-medium">Full </p>
+                <p className="text-[#c6c6c6] text-[0.85rem] font-medium">Stack Dev.</p>
               </div>
               <div>
-                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">UI</p>
-                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Designer.</p>
+                <p className="text-[#eaeaea] text-[0.85rem] font-medium">UI</p>
+                <p className="text-[#c6c6c6] text-[0.85rem] font-medium">Designer.</p>
               </div>
               <div>
-                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Visual</p>
-                <p className="text-[#6E6E6E] text-[0.85rem] font-medium">Designer.</p>
+                <p className="text-[#eaeaea] text-[0.85rem] font-medium">Visual</p>
+                <p className="text-[#c6c6c6] text-[0.85rem] font-medium">Designer.</p>
               </div>
             </div>
             </div>
             <div className="w-[300px] pt-2">
-            <p className="text-[#5E5E5E] text-[0.85rem] leading-relaxed">
+            <p className="text-[#c4c4c4] font-am text-[0.85rem] leading-tight t-10">
               Photography is more than just taking pictures—it's about preserving emotions, details, and memories that last a lifetime.
             </p>
           </div>

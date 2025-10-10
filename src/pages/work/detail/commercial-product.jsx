@@ -9,7 +9,7 @@ import WrapAnimateUp from "@/Components/Path/WrapAnimateUp";
 
 const Index = () => {
   const originalUrl = useHostname() + "/images/";
-  const { step } = useStep();
+ 
 
   // Project configuration - edit this for different projects
   const projectData = {

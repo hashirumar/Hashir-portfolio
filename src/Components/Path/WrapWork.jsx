@@ -14,7 +14,7 @@ const WrapWork = () => {
           {
             img: originalUrl + "twitchlogo.png",
             name: "Milan Portraits.",
-            link: "/work/detail/milan-portraits",
+            link: "/work/detail/designwork",
           },
           {
             img: originalUrl + "naturebrightlogo.png",

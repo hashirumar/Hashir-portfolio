@@ -3,9 +3,7 @@ import useHostname from "../Provider/HostnameProvider";
 import { Container } from "react-bootstrap";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { motion } from "framer-motion";
 import Image from "next/image";
-import BackdropFixed from "../Path/BackdropFixed";
 
 const Navbar = () => {
   const originalUrl = useHostname();
@@ -19,89 +17,50 @@ const Navbar = () => {
   };
 
   const [ToogleMenu, setToogleMenu] = useState(false);
-  const [ToogleResume, setToogleResume] = useState(false);
 
   return (
     <Fragment>
-      <BackdropFixed
-        status={ToogleResume}
-        onAction={() => setToogleResume(!ToogleResume)}
-      />
-      <div
-        className={
-          "fixed z-[91] w-[90%] ss:w-[390px] bg-white p-[24px] left-1/2 -translate-x-1/2 top-1/2  transition-all duration-300 " +
-          (ToogleResume
-            ? "-translate-y-1/2"
-            : "translate-y-[80%] opacity-0 pointer-events-none")
-        }
-      >
-        <div className="grid grid-cols-1 gap-[24px]">
-          <img
-            src={originalUrl + "/images/Frame 14.png"}
-            className="w-full object-cover"
-            alt=""
-          />
-          <div className="text-center">
-            <h5 className="text__24 mb-2">Get a free resume template!</h5>
-            <p className="text__14 text-[#525252]">
-              Purchase this product today and receive a professionally designed
-              resume, totally free. Perfect to help you stand out in your next
-              application.
-            </p>
-          </div>
-          <div className="text-center">
-            <a
-              href={"#!"}
-              target="_blank"
-              className="px-[24px] py-[10px] rounded-full border !border-Mneutral_900 inline-block"
-            >
-              <div className="flex items-center gap-2">
-                <p className="text__18">Buy now</p>
-                <img
-                  src={originalUrl + "/images/carbon_arrow-up-right.svg"}
-                  alt=""
-                />
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className="fixed w-full py-4 bg-white z-[80] border-b !border-Mgrayscale_200 lg:!border-none">
+      {/* Navbar */}
+      <div className="fixed w-full py-4 bg-[#0F0F0F] z-[80] border-b !border-Mgrayscale_200 lg:!border-none">
         <Container className="overflow-hidden">
           <div className="flex items-center justify-between relative text__16 text-[0.85rem] font-medium">
             <Link href="/" className="flex items-center space-x-2">
               {/* Logo image */}
               <Image
-                src="/images/hashirdarkbglogo.png"   // stored in public/logo.png
+                src="/images/hashirdarkbglogo.png"
                 alt="Logo"
                 width={28}
                 height={28}
                 className="object-contain"
               />
-              {/* Text (optional) */}
-              <span className="text-Mgrayscale_900 text-[1rem] text-medium ">Hashir</span>
+              <span className="text-Mgrayscale_900 font-am uppercase text-[1rem] font-medium">
+                Hashir
+              </span>
             </Link>
 
-            <div className="hidden md:flex justify-end gap-[36px] absolute right-0 top-1/2 -translate-y-1/2">
+            {/* Desktop Menu */}
+            <div className="hidden md:flex justify-end font-am uppercase gap-[36px] absolute right-0 top-1/2 -translate-y-1/2">
               <Link href={"/projects"}>Projects</Link>
               <Link href={"/article"}>Design</Link>
               <Link href={"/about"}>About</Link>
-              <div
-                onClick={() => setToogleResume(!ToogleResume)}
+              {/* Simple Resume Link */}
+              <a
+                href="https://drive.google.com/file/d/1abcDEFgHIjkLMNOPQ/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="cursor-pointer"
               >
                 Resume
-              </div>
+              </a>
             </div>
 
+            {/* Mobile Menu Toggle */}
             <div
               onClick={() => setToogleMenu(!ToogleMenu)}
               className="font-medium text__14 md:hidden cursor-pointer"
             >
               {ToogleMenu ? (
-                <>
-                  <img src={originalUrl + "/images/Close.svg"} alt="" />
-                </>
+                <img src={originalUrl + "/images/Close.svg"} alt="close menu" />
               ) : (
                 "MENU"
               )}
@@ -109,9 +68,11 @@ const Navbar = () => {
           </div>
         </Container>
       </div>
+
+      {/* Mobile Menu */}
       <div
         className={
-          "fixed z-[75] bg-white w-full left-0 pt-[70px] transition-all duration-300 md:hidden " +
+          "fixed z-[75] bg-[#0F0F0F] w-full left-0 pt-[70px] transition-all duration-300 md:hidden " +
           (ToogleMenu ? "top-0" : "-top-[50rem]")
         }
       >
@@ -124,16 +85,19 @@ const Navbar = () => {
               Design
             </Link>
             <Link href={"/about"} className="text-[32px]">
-              ABOUT
+              About
             </Link>
-            <div
-              onClick={() => setToogleResume(!ToogleResume)}
-              className="text-[32px] cursor-pointer"
+            {/* Resume Link for Mobile */}
+            <a
+              href="https://drive.google.com/file/d/1abcDEFgHIjkLMNOPQ/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[32px]"
             >
-              RESUME
-            </div>
+              Resume
+            </a>
             <Link href={"/contact"} className="text-[32px]">
-              CONTACT
+              Contact
             </Link>
           </div>
         </Container>
@@ -144,7 +108,6 @@ const Navbar = () => {
 
 export default Navbar;
 
-
 // import React, { Fragment, useState } from "react";
 // import useHostname from "../Provider/HostnameProvider";
 // import { Container } from "react-bootstrap";
@@ -154,9 +117,8 @@ export default Navbar;
 // import Image from "next/image";
 // import BackdropFixed from "../Path/BackdropFixed";
 
-// const Navbar = ({ step = 0 }) => {
+// const Navbar = () => {
 //   const originalUrl = useHostname();
-
 //   const router = useRouter();
 
 //   const isActive = (path) => {
@@ -167,9 +129,8 @@ export default Navbar;
 //   };
 
 //   const [ToogleMenu, setToogleMenu] = useState(false);
-
 //   const [ToogleResume, setToogleResume] = useState(false);
-
+ 
 //   return (
 //     <Fragment>
 //       <BackdropFixed
@@ -178,7 +139,7 @@ export default Navbar;
 //       />
 //       <div
 //         className={
-//           "fixed z-[91] w-[90%] ss:w-[390px] bg-white p-[24px] left-1/2 -translate-x-1/2 top-1/2  transition-all duration-300 " +
+//           "fixed z-[91] w-[90%] ss:w-[390px] bg-[#0F0F0F] p-[24px] left-1/2 -translate-x-1/2 top-1/2  transition-all duration-300 " +
 //           (ToogleResume
 //             ? "-translate-y-1/2"
 //             : "translate-y-[80%] opacity-0 pointer-events-none")
@@ -215,28 +176,23 @@ export default Navbar;
 //           </div>
 //         </div>
 //       </div>
-//       <div className="fixed w-full py-4 bg-white z-[80] border-b !border-Mgrayscale_200 lg:!border-none">
+//       <div className="fixed w-full py-4 bg-[#0F0F0F] z-[80] border-b !border-Mgrayscale_200 lg:!border-none">
 //         <Container className="overflow-hidden">
-//           <div
-//             className={
-//               "flex items-center justify-between relative text__16 text-[0.85rem] font-medium transition-all duration-700 " +
-//               (step > 3 ? "" : "-translate-y-[2rem]")
-//             }
-//           >
+//           <div className="flex items-center justify-between relative text__16 text-[0.85rem] font-medium">
 //             <Link href="/" className="flex items-center space-x-2">
-//       {/* Logo image */}
-//       <Image
-//         src="/images/hashirdarkbglogo.png"   // stored in public/logo.png
-//         alt="Logo"
-//         width={28}
-//         height={28}
-//         className="object-contain"
-//       />
-//       {/* Text (optional) */}
-//       <span className="text-Mgrayscale_900 text-[1rem] text-medium ">Hashir</span>
-//     </Link>
+//               {/* Logo image */}
+//               <Image
+//                 src="/images/hashirdarkbglogo.png"   // stored in public/logo.png
+//                 alt="Logo"
+//                 width={28}
+//                 height={28}
+//                 className="object-contain"
+//               />
+//               {/* Text (optional) */}
+//               <span className="text-Mgrayscale_900 text-[1rem] text-medium ">Hashir</span>
+//             </Link>
 
-//             <div className="hidden md:flex  justify-end  gap-[36px] absolute right-0  top-1/2 -translate-y-1/2">
+//             <div className="hidden md:flex justify-end gap-[36px] absolute right-0 top-1/2 -translate-y-1/2">
 //               <Link href={"/projects"}>Projects</Link>
 //               <Link href={"/article"}>Design</Link>
 //               <Link href={"/about"}>About</Link>
@@ -244,13 +200,10 @@ export default Navbar;
 //                 onClick={() => setToogleResume(!ToogleResume)}
 //                 className="cursor-pointer"
 //               >
-//                 Resume  `{" "}
+//                 Resume
 //               </div>
 //             </div>
 
-//             {/* <Link href={"/contact"} className="md:block hidden">
-//               CONTACT
-//             </Link> */}
 //             <div
 //               onClick={() => setToogleMenu(!ToogleMenu)}
 //               className="font-medium text__14 md:hidden cursor-pointer"
@@ -268,7 +221,7 @@ export default Navbar;
 //       </div>
 //       <div
 //         className={
-//           "fixed z-[75] bg-white w-full left-0 pt-[70px] transition-all duration-300 md:hidden " +
+//           "fixed z-[75] bg-[#0F0F0F] w-full left-0 pt-[70px] transition-all duration-300 md:hidden " +
 //           (ToogleMenu ? "top-0" : "-top-[50rem]")
 //         }
 //       >
@@ -287,7 +240,7 @@ export default Navbar;
 //               onClick={() => setToogleResume(!ToogleResume)}
 //               className="text-[32px] cursor-pointer"
 //             >
-//               RESUME{" "}
+//               RESUME
 //             </div>
 //             <Link href={"/contact"} className="text-[32px]">
 //               CONTACT
@@ -300,3 +253,5 @@ export default Navbar;
 // };
 
 // export default Navbar;
+
+

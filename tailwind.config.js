@@ -2,6 +2,7 @@
 const colors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
+   darkMode: 'class',
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/Components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,7 +11,13 @@ module.exports = {
   theme: {
     fontFamily: {
       InterTight: ["Inter Tight", "sans-serif"],
+      am: ["am", "sans-serif"],
+        db: ["db", "sans-serif"],
+        dh: ["dh", "sans-serif"],
+        dm: ["dm", "sans-serif"],
+        ds: ["ds", "sans-serif"],
     },
+    
     colors: {
       ...colors,
       transparent: "transparent",
